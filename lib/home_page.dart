@@ -4,8 +4,11 @@ import 'package:learn_widget_flutter/widgets/center.dart';
 import 'package:learn_widget_flutter/widgets/container.dart';
 import 'package:learn_widget_flutter/widgets/decoration_container.dart';
 import 'package:learn_widget_flutter/widgets/expanded_flexible.dart';
+import 'package:learn_widget_flutter/widgets/flexible.dart';
 import 'package:learn_widget_flutter/widgets/font_test.dart';
 import 'package:learn_widget_flutter/widgets/image.dart';
+import 'package:learn_widget_flutter/widgets/mediaquery.dart';
+import 'package:learn_widget_flutter/widgets/navigation_01.dart';
 import 'package:learn_widget_flutter/widgets/padding_pembungkus.dart';
 import 'package:learn_widget_flutter/widgets/row_column.dart';
 import 'package:learn_widget_flutter/widgets/scaffold.dart';
@@ -31,6 +34,9 @@ class _HomePageState extends State<HomePage> {
     "Scaffold",
     "Textfield Widget",
     "Expanded + Flexible",
+    "Flexible",
+    "Navigation",
+    "MediaQuery",
   ];
   int _indexPage = 0;
 
@@ -76,6 +82,9 @@ class _HomePageState extends State<HomePage> {
           WidgetScaffold(),
           WidgetTextfieldWidget(),
           WidgetExpandedFlexible(),
+          ExpandedFlexiblePage(),
+          WidgetNavigation01("pertama buka"),
+          WidgetMediaquery(),
         ],
       ),
     );
