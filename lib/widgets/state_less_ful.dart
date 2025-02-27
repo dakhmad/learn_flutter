@@ -3,16 +3,13 @@ import 'package:flutter/material.dart';
 class Heading extends StatelessWidget {
   final String text;
 
-  const Heading({Key? key, required this.text}) : super(key: key);
+  const Heading({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: const TextStyle(
-        fontSize: 24.0,
-        fontWeight: FontWeight.bold,
-      ),
+      style: const TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
     );
   }
 }
@@ -40,7 +37,7 @@ class _BiggerTextState extends State<BiggerText> {
               _textSize = 80.0;
             });
           },
-        )
+        ),
       ],
     );
   }

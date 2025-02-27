@@ -2,7 +2,7 @@
     <application
         android:label="BelajarWidget"
         android:name="${applicationName}"
-        android:icon="@mipmap/hiu">
+        android:icon="@mipmap/learn_widget_flutter">
         <activity
             android:name=".MainActivity"
             android:exported="true"

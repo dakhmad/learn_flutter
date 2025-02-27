@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class FirtsScreenScaffold extends StatelessWidget{
-  const FirtsScreenScaffold({super.key});
+class WidgetScaffold extends StatelessWidget{
+  const WidgetScaffold({super.key});
 
   @override
   Widget build(BuildContext context) {

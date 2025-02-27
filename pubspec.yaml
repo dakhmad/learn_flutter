@@ -22,7 +22,13 @@ flutter:
   assets:
     - images/
 
-  # fonts:
-  #   - family: Oswald
-  #     fonts:
-  #       - assets: fonts/Oswald-Oswald-Reguler.ttf
+  fonts:
+    - family: Oswald
+      fonts:
+        - asset: fonts/Oswald/Oswald-Bold.ttf
+
+
+#  fonts:
+#    - family: Oswald
+#      fonts:
+#        - assets: fonts/Oswald-Oswald-Reguler.ttf

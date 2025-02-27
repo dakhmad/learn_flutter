@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class TengahWidget extends StatelessWidget{
-  const TengahWidget({super.key});
+class WidgetCenter extends StatelessWidget{
+  const WidgetCenter({super.key});
   
   @override
   Widget build(BuildContext context) {

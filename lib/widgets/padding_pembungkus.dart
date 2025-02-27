@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class PaddingPembungkusWidget extends StatelessWidget{
-  const PaddingPembungkusWidget({super.key});
+class WidgetPaddingPembungkus extends StatelessWidget{
+  const WidgetPaddingPembungkus({super.key});
 
   @override
   Widget build(BuildContext context) {

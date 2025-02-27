@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:learn_widget_flutter/theme.dart';
 
-class TextfieldWidget extends StatefulWidget {
-  TextfieldWidget({super.key});
+class WidgetTextfieldWidget extends StatefulWidget {
+  const WidgetTextfieldWidget({super.key});
 
   @override
-  State<TextfieldWidget> createState() => _TextfieldWidgetState();
+  State<WidgetTextfieldWidget> createState() => _WidgetTextfieldWidgetState();
 }
 
-class _TextfieldWidgetState extends State<TextfieldWidget> {
+class _WidgetTextfieldWidgetState extends State<WidgetTextfieldWidget> {
   String _name = '';
 
   @override
@@ -59,6 +59,7 @@ class _TextfieldWidgetState extends State<TextfieldWidget> {
             ),
           ),
           SizedBox(height: 20),
+          // ignore: avoid_unnecessary_containers
           Container(
             // decoration: BoxDecoration(color: lightBiruTheme),
             child: ElevatedButton(

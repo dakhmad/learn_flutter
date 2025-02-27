@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class RekapButton extends StatelessWidget {
-  const RekapButton({super.key});
+class WidgetButton extends StatelessWidget {
+  const WidgetButton({super.key});
 
   @override
   Widget build(BuildContext context) {

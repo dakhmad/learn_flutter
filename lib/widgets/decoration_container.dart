@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DecorationContainer extends StatelessWidget{
-  const DecorationContainer({super.key});
+class WidgetDecorationContainer extends StatelessWidget{
+  const WidgetDecorationContainer({super.key});
 
   @override
   Widget build(BuildContext context) {

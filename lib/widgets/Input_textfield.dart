@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FirstScreen extends StatefulWidget {
-  FirstScreen({super.key});
+  const FirstScreen({super.key});
 
   @override
   State<FirstScreen> createState() => _FirstScreenState();

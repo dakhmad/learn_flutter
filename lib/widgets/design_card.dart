@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CardDesign1 extends StatelessWidget {
-  CardDesign1({super.key});
+  const CardDesign1({super.key});
 
   @override
   Widget build(BuildContext context) {

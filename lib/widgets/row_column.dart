@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class WRowColumn extends StatelessWidget {
-  const WRowColumn({super.key});
+class WidgetRowColumn extends StatelessWidget {
+  const WidgetRowColumn({super.key});
 
   @override
   Widget build(BuildContext context) {
