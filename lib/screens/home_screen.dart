@@ -109,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 150,
                   width: double.infinity,
                   child: Card(
-                    color: Color(0xff8c5cd4),
+                    color: Color(0xff905cd4),
                     child: InkWell(
                       onTap: () {
                         ScaffoldMessenger.of(context).showSnackBar(
