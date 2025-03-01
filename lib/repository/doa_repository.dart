@@ -1,30 +1,38 @@
 import 'package:ibadah_list/model/doa.dart';
-import 'package:ibadah_list/services/api_services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class DoaRepository {
-  final ApiService apiService;
-
-  DoaRepository(this.apiService);
-
-  // Fetch all Doa
-  Future<List<Doa>> getAllDoa() async {
-    return await apiService.fetchProducts();
+  // Mengambil semua doa
+  List<Doa> getAllDoa() {
+    return DoaList;
   }
 
-  // Get a single Doa by ID
-  Future<Doa?> getDoa(int id) async {
-    List<Doa> allDoa = await getAllDoa();
-    return allDoa.firstWhere((doa) => doa.id == id);
+  // Mengambil doa berdasarkan ID
+  Doa? getDoa(String id) {
+    return DoaList.firstWhere(
+      (doa) => doa.id == id,
+      orElse: () => throw Exception("Doa tidak ditemukan"),
+    );
   }
 
-  // Search Doa by keyword
-  Future<List<Doa>> searchDoa(String keyword) async {
-    List<Doa> allDoa = await getAllDoa();
-    return allDoa.where((doa) =>
-    doa.doa.toLowerCase().contains(keyword.toLowerCase()) ||
-        doa.ayat.toLowerCase().contains(keyword.toLowerCase()) ||
-        doa.latin.toLowerCase().contains(keyword.toLowerCase()) ||
-        doa.artinya.toLowerCase().contains(keyword.toLowerCase())
-    ).toList();
+  // Mencari doa berdasarkan kata kunci (pada nama doa, ayat, latin, atau artinya)
+  List<Doa> searchDoa(String query) {
+    return DoaList.where((doa) =>
+    doa.doa.toLowerCase().contains(query.toLowerCase()) ||
+    doa.ayat.toLowerCase().contains(query.toLowerCase()) ||
+    doa.latin.toLowerCase().contains(query.toLowerCase()) ||
+    doa.artinya.toLowerCase().contains(query.toLowerCase())).toList();
+  }
+
+  // Menyimpan ID doa terakhir yang dibaca
+  Future<void> saveLastReadDoa(String doaId) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString("last_read_doa", doaId);
+  }
+
+  // Mengambil ID doa terakhir yang dibaca
+  Future<String?> getLastReadDoa() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString("last_read_doa");
   }
 }
